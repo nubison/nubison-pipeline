@@ -1,3 +1,6 @@
+dist
 __pycache__/
 *.pyc
 .env/
+.tox
+.pytest_cache
