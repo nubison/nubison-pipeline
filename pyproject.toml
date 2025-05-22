@@ -35,3 +35,8 @@ isolated_build = True
 deps = pytest>=8.3.0
 commands = pytest {posargs:test}
 """
+
+[tool.uv]
+python-version = ">=3.9"
+exclude-newer = false
+resolution = "highest"
