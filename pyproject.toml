@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel>=0.37.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nubison-pipeline"
+version = "0.1.0"
+description = "Nubison Pipeline for ML Model Training and Evaluation"
+readme = "README.md"
+authors = [
+    {name = "Terry", email = "teri04111@gmail.com"}
+]
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "tox>=4.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nubison_pipeline*"]
+exclude = ["test"]
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py39, py310, py311, py312
+isolated_build = True
+
+[testenv]
+deps = pytest>=8.3.0
+commands = pytest {posargs:test}
+"""
