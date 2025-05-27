@@ -49,4 +49,3 @@ print(result)
 
 - This project uses `uv` for dependency management
 - Python 3.9 or higher is required
-- Package versions are limited to those uploaded before November 26, 2024
